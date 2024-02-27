@@ -1,0 +1,7 @@
+object form_one_form_dtl: Tform_one_form_dtl
+  Left = 1520
+  Height = 240
+  Top = 250
+  Width = 320
+  Caption = 'form_one_form_dtl'
+end

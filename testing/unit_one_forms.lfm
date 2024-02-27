@@ -1,0 +1,134 @@
+object form_one_form: Tform_one_form
+  Left = 1520
+  Height = 225
+  Top = 250
+  Width = 443
+  Caption = 'form_one_form'
+  ClientHeight = 225
+  ClientWidth = 443
+  OnShow = FormShow
+  object RMKDBEdit1: TRMKDBEdit
+    Left = 141
+    Height = 24
+    Top = 92
+    Width = 264
+    DataField = 'of_nama'
+    DataSource = ds_one_form
+    MaxLength = 0
+    TabOrder = 1
+    MudarColor = 14087422
+  end
+  object RMKPanelWarna1: TRMKPanelWarna
+    Left = 152
+    Height = 26
+    Top = 168
+    Width = 126
+    Caption = 'Save'
+    Color = clInfoBk
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 3
+    OnClick = RMKPanelWarna1Click
+    CorInicial = clInfoBk
+    CorMouseSob = clHotLight
+  end
+  object RMKDBDateEdit1: TRMKDBDateEdit
+    Left = 141
+    Height = 24
+    Top = 124
+    Width = 197
+    CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+    DateOrder = doNone
+    ButtonWidth = 23
+    NumGlyphs = 1
+    MaxLength = 0
+    TabOrder = 2
+    DataField = 'of_tgl_form'
+    DataSource = ds_one_form
+    MudarColor = 14087422
+  end
+  object lbl_kode_form: TLabel
+    Left = 37
+    Height = 17
+    Top = 67
+    Width = 69
+    Caption = 'Kode Form'
+  end
+  object lbl_nama_form: TLabel
+    Left = 36
+    Height = 17
+    Top = 99
+    Width = 74
+    Caption = 'Description'
+  end
+  object lbl_tgl_form: TLabel
+    Left = 37
+    Height = 17
+    Top = 131
+    Width = 87
+    Caption = 'Tanggal Form'
+  end
+  object ed_no: TRMKEdit
+    Left = 141
+    Height = 24
+    Top = 60
+    Width = 80
+    TabOrder = 0
+    OnExit = ed_noExit
+    MudarColor = 14087422
+    CampoObrigatorio = False
+  end
+  object mydbconn: TMyConnection
+    Database = 'laz'
+    Username = 'root'
+    Server = '192.168.1.3'
+    Left = 20
+    Top = 4
+    EncryptedPassword = '8FFF9EFF8CFF8CFF88FF90FF8DFF9BFF'
+  end
+  object qry_m_form: TMyQuery
+    Connection = mydbconn
+    SQL.Strings = (
+      'select * from laz.one_forms'
+    )
+    FilterOptions = []
+    Left = 68
+    Top = 4
+    object qry_m_formof_kode: TLongintField
+      FieldKind = fkData
+      FieldName = 'of_kode'
+      Index = 0
+      LookupCache = False
+      Origin = 'one_forms.of_kode'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qry_m_formof_nama: TStringField
+      FieldKind = fkData
+      FieldName = 'of_nama'
+      Index = 1
+      LookupCache = False
+      Origin = 'one_forms.of_nama'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 300
+    end
+    object qry_m_formof_tgl_form: TDateField
+      FieldKind = fkData
+      FieldName = 'of_tgl_form'
+      Index = 2
+      LookupCache = False
+      Origin = 'one_forms.of_tgl_form'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object ds_one_form: TMyDataSource
+    DataSet = qry_m_form
+    Left = 112
+    Top = 4
+  end
+end

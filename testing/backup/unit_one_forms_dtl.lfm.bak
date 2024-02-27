@@ -1,0 +1,331 @@
+object form_one_form_dtl: Tform_one_form_dtl
+  Left = 1520
+  Height = 528
+  Top = 250
+  Width = 774
+  Caption = 'form_one_form_dtl'
+  ClientHeight = 528
+  ClientWidth = 774
+  OnShow = FormShow
+  object dbe_ofNama: TRMKDBEdit
+    Left = 248
+    Height = 24
+    Top = 72
+    Width = 224
+    DataField = 'of_nama'
+    DataSource = Ds_Form_Head
+    MaxLength = 300
+    TabOrder = 1
+    MudarColor = 14087422
+  end
+  object edt_of_no: TRMKEdit
+    Left = 248
+    Height = 24
+    Top = 44
+    Width = 80
+    TabOrder = 0
+    MudarColor = 14087422
+    CampoObrigatorio = False
+  end
+  object dbe_of_tgl_form: TRMKDBDateEdit
+    Left = 248
+    Height = 24
+    Top = 100
+    Width = 132
+    CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+    DefaultToday = True
+    DateOrder = doNone
+    ButtonWidth = 23
+    NumGlyphs = 1
+    MaxLength = 0
+    TabOrder = 2
+    Text = '12/24/1999'
+    DataField = 'of_tgl_form'
+    DataSource = Ds_Form_Head
+    MudarColor = 14087422
+  end
+  object lbl_no_form: TLabel
+    Left = 144
+    Height = 17
+    Top = 51
+    Width = 81
+    Caption = 'Nomor Form'
+  end
+  object lbl_nama_form: TLabel
+    Left = 144
+    Height = 17
+    Top = 79
+    Width = 76
+    Caption = 'Nama Form'
+  end
+  object lbl_of_tgl_form: TLabel
+    Left = 144
+    Height = 17
+    Top = 107
+    Width = 87
+    Caption = 'Tanggal Form'
+  end
+  object rdbg_one_forms_det: TRxDBGrid
+    Left = 0
+    Height = 364
+    Top = 130
+    Width = 774
+    ColumnDefValues.BlobText = '(blob)'
+    TitleButtons = False
+    AutoSort = True
+    KeyStrokes = <    
+      item
+        Command = rxgcShowFindDlg
+        ShortCut = 16454
+        Enabled = True
+      end    
+      item
+        Command = rxgcShowColumnsDlg
+        ShortCut = 16471
+        Enabled = True
+      end    
+      item
+        Command = rxgcShowFilterDlg
+        ShortCut = 16468
+        Enabled = True
+      end    
+      item
+        Command = rxgcShowSortDlg
+        ShortCut = 16467
+        Enabled = True
+      end    
+      item
+        Command = rxgcShowQuickFilter
+        ShortCut = 16465
+        Enabled = True
+      end    
+      item
+        Command = rxgcHideQuickFilter
+        ShortCut = 16456
+        Enabled = True
+      end    
+      item
+        Command = rxgcSelectAll
+        ShortCut = 16449
+        Enabled = True
+      end    
+      item
+        Command = rxgcDeSelectAll
+        ShortCut = 16429
+        Enabled = True
+      end    
+      item
+        Command = rxgcInvertSelection
+        ShortCut = 16426
+        Enabled = True
+      end    
+      item
+        Command = rxgcOptimizeColumnsWidth
+        ShortCut = 16427
+        Enabled = True
+      end    
+      item
+        Command = rxgcCopyCellValue
+        ShortCut = 16451
+        Enabled = True
+      end>
+    FooterOptions.DrawFullLine = False
+    SearchOptions.QuickSearchOptions = [loCaseInsensitive, loPartialKey]
+    SearchOptions.FromStart = False
+    OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+    Align = alBottom
+    Color = clWindow
+    DrawFullLine = False
+    FocusColor = clRed
+    SelectedColor = clHighlight
+    DataSource = ds_one_forms_det
+    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    TabOrder = 3
+  end
+  object pnl_bawah: TRMKPanelStandard
+    Left = 0
+    Height = 34
+    Top = 494
+    Width = 774
+    Align = alBottom
+    TabOrder = 5
+  end
+  object pnl_atas: TRMKPanelStandard
+    Left = 0
+    Height = 34
+    Top = 0
+    Width = 774
+    Align = alTop
+    TabOrder = 4
+  end
+  object Button1: TButton
+    Left = 580
+    Height = 25
+    Top = 75
+    Width = 75
+    Caption = 'Button1'
+    TabOrder = 6
+  end
+  object ConnMyDb: TMyConnection
+    Connected = True
+    Username = 'root'
+    Server = '192.168.1.2'
+    Left = 20
+    Top = 12
+    EncryptedPassword = '8FFF9EFF8CFF8CFF88FF90FF8DFF9BFF'
+  end
+  object Qry_one_forms: TMyQuery
+    Connection = ConnMyDb
+    SQL.Strings = (
+      'select * from laz.one_forms'
+    )
+    FilterOptions = []
+    Active = True
+    Left = 20
+    Top = 28
+    object Qry_one_formsof_pk: TLongintField
+      FieldKind = fkData
+      FieldName = 'of_pk'
+      Index = 0
+      LookupCache = False
+      Origin = 'one_forms.of_pk'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object Qry_one_formsof_kode: TLongintField
+      FieldKind = fkData
+      FieldName = 'of_kode'
+      Index = 1
+      LookupCache = False
+      Origin = 'one_forms.of_kode'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object Qry_one_formsof_nama: TStringField
+      FieldKind = fkData
+      FieldName = 'of_nama'
+      Index = 2
+      LookupCache = False
+      Origin = 'one_forms.of_nama'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 300
+    end
+    object Qry_one_formsof_tgl_form: TDateField
+      FieldKind = fkData
+      FieldName = 'of_tgl_form'
+      Index = 3
+      LookupCache = False
+      Origin = 'one_forms.of_tgl_form'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object Qry_one_formsof_ins_user: TStringField
+      FieldKind = fkData
+      FieldName = 'of_ins_user'
+      Index = 4
+      LookupCache = False
+      Origin = 'one_forms.of_ins_user'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 90
+    end
+    object Qry_one_formsof_ins_date: TDateField
+      FieldKind = fkData
+      FieldName = 'of_ins_date'
+      Index = 5
+      LookupCache = False
+      Origin = 'one_forms.of_ins_date'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object Ds_Form_Head: TMyDataSource
+    DataSet = Qry_one_forms
+    Left = 20
+    Top = 48
+  end
+  object qry_one_form_dtl: TMyQuery
+    Connection = ConnMyDb
+    SQL.Strings = (
+      'select * from laz.one_forms_det'
+    )
+    FilterOptions = []
+    Active = True
+    Left = 68
+    Top = 36
+    object qry_one_form_dtlofd_of_pk: TLongintField
+      FieldKind = fkData
+      FieldName = 'ofd_of_pk'
+      Index = 0
+      LookupCache = False
+      Origin = 'one_forms_det.ofd_of_pk'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qry_one_form_dtlofd_pk: TLongintField
+      FieldKind = fkData
+      FieldName = 'ofd_pk'
+      Index = 1
+      LookupCache = False
+      Origin = 'one_forms_det.ofd_pk'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qry_one_form_dtlofd_ket_forms: TStringField
+      FieldKind = fkData
+      FieldName = 'ofd_ket_forms'
+      Index = 2
+      LookupCache = False
+      Origin = 'one_forms_det.ofd_ket_forms'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 150
+    end
+    object qry_one_form_dtlofd_jumlah: TLongintField
+      FieldKind = fkData
+      FieldName = 'ofd_jumlah'
+      Index = 3
+      LookupCache = False
+      Origin = 'one_forms_det.ofd_jumlah'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qry_one_form_dtlofd_ins_user: TStringField
+      FieldKind = fkData
+      FieldName = 'ofd_ins_user'
+      Index = 4
+      LookupCache = False
+      Origin = 'one_forms_det.ofd_ins_user'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 90
+    end
+    object qry_one_form_dtlofd_ins_date: TDateField
+      FieldKind = fkData
+      FieldName = 'ofd_ins_date'
+      Index = 5
+      LookupCache = False
+      Origin = 'one_forms_det.ofd_ins_date'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object ds_one_forms_det: TMyDataSource
+    DataSet = qry_one_form_dtl
+    Left = 68
+    Top = 56
+  end
+end
