@@ -1,7 +1,7 @@
 {
  "host": "192.168.1.2",
  "port": 3306,
- "database": "ms",
+ "database": "laz",
  "username": "root",
  "password": "password",
  "protocol": "mysql",
