@@ -19,6 +19,7 @@ type
       constructor Create(DatabaseConnection:TDBConnection);
       destructor Destroy; override;
       procedure baru(QryHead:TMyQuery;QryDet:TMyQuery);
+      function  CekKodeToko:Boolean;
 
   end;
 
@@ -51,9 +52,26 @@ begin
 
   QryDet.Close;
   QryDet.Connection:= FConnection;
-  QryDet.SQL.Text:='select * from '+g_db1+'.one_forms_det whre ofd_of_pk=0';
+  QryDet.SQL.Text:='select * from '+g_db1+'.one_forms_det where ofd_of_pk=0';
   QryDet.Open;
 
+end;
+
+function TModelOneFormsDtl.CekKodeToko: Boolean;
+var
+  QryToko : TMyQuery;
+begin
+  QryToko:= TMyQuery.Create(nil);
+
+  QryToko.Close;
+  QryToko.Connection:=FConnection;
+  QryToko.SQL.Text:='';
+  QryToko.Open;
+
+  if QryToko.IsEmpty then
+     Result:= True
+  else
+     Result:= False;
 end;
 
 end.

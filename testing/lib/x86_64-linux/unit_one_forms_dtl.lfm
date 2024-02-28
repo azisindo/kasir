@@ -24,6 +24,7 @@ object form_one_form_dtl: Tform_one_form_dtl
     Top = 44
     Width = 80
     TabOrder = 0
+    OnExit = edt_of_noExit
     MudarColor = 14087422
     CampoObrigatorio = False
   end
@@ -168,7 +169,7 @@ object form_one_form_dtl: Tform_one_form_dtl
   object ConnMyDb: TMyConnection
     Connected = True
     Username = 'root'
-    Server = '192.168.1.2'
+    Server = '192.168.1.7'
     Left = 20
     Top = 12
     EncryptedPassword = '8FFF9EFF8CFF8CFF88FF90FF8DFF9BFF'

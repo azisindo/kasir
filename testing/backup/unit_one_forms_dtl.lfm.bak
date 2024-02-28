@@ -14,7 +14,7 @@ object form_one_form_dtl: Tform_one_form_dtl
     Width = 224
     DataField = 'of_nama'
     DataSource = Ds_Form_Head
-    MaxLength = 300
+    MaxLength = 0
     TabOrder = 1
     MudarColor = 14087422
   end
@@ -24,6 +24,7 @@ object form_one_form_dtl: Tform_one_form_dtl
     Top = 44
     Width = 80
     TabOrder = 0
+    OnExit = edt_of_noExit
     MudarColor = 14087422
     CampoObrigatorio = False
   end
@@ -39,7 +40,6 @@ object form_one_form_dtl: Tform_one_form_dtl
     NumGlyphs = 1
     MaxLength = 0
     TabOrder = 2
-    Text = '12/24/1999'
     DataField = 'of_tgl_form'
     DataSource = Ds_Form_Head
     MudarColor = 14087422
@@ -169,7 +169,7 @@ object form_one_form_dtl: Tform_one_form_dtl
   object ConnMyDb: TMyConnection
     Connected = True
     Username = 'root'
-    Server = '192.168.1.2'
+    Server = '192.168.1.7'
     Left = 20
     Top = 12
     EncryptedPassword = '8FFF9EFF8CFF8CFF88FF90FF8DFF9BFF'
@@ -180,7 +180,6 @@ object form_one_form_dtl: Tform_one_form_dtl
       'select * from laz.one_forms'
     )
     FilterOptions = []
-    Active = True
     Left = 20
     Top = 28
     object Qry_one_formsof_pk: TLongintField
@@ -257,7 +256,6 @@ object form_one_form_dtl: Tform_one_form_dtl
       'select * from laz.one_forms_det'
     )
     FilterOptions = []
-    Active = True
     Left = 68
     Top = 36
     object qry_one_form_dtlofd_of_pk: TLongintField

@@ -7,7 +7,8 @@ interface
 uses
   Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, StdCtrls,
   RxDBGrid, MyAccess, unitRMKDBEdit, UnitRMKEdit, unitRMKDBDateEdit,
-  unitRMKPanelStandard,class_dbconnection,class_init_db,unit_libstring,model_one_forms_dtl;
+  unitRMKPanelStandard,class_dbconnection,class_init_db,unit_libstring,model_one_forms_dtl,
+  class_unit_usaha;
 
 type
 
@@ -41,11 +42,13 @@ type
     qry_one_form_dtlofd_of_pk: TLongintField;
     qry_one_form_dtlofd_pk: TLongintField;
     rdbg_one_forms_det: TRxDBGrid;
+    procedure edt_of_noExit(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private
     FDBConnection: TDBConnection;
     FDBInit:TInitDB;
     FModelOneFormsDtl:TModelOneFormsDtl;
+    FunitUsaha:TUnitUsaha;
 
   public
 
@@ -62,25 +65,44 @@ implementation
 procedure Tform_one_form_dtl.FormShow(Sender: TObject);
 begin
   FDBConnection:=TDBConnection.Create;
-  FModelOneFormsDtl:=TModelOneFormsDtl.Create(FDBConnection);
-
   if not FDBConnection.connect then
-    begin
-      ShowMessage(FDBConnection.logger);
-      exit;
-    end;
-
+  begin
+    ShowMessage(FDBConnection.logger);
+    exit;
+  end;
+  //inisialisasi seting db
   FDBInit:=TInitDB.Create(FDBConnection);
-
-
   if not FDBInit.InitDB('1234','2000') then
     begin
       ShowMessage(FDBInit.InitLoger);
       Abort;
     end;
 
+  //form model dtl.
+  FModelOneFormsDtl:=TModelOneFormsDtl.Create(FDBConnection);
   FModelOneFormsDtl.baru(Qry_one_forms,qry_one_form_dtl);
 
+  //inisilisasi master Store
+  FUnitUsaha:=TUnitUsaha.create(FDBConnection);
+end;
+
+procedure Tform_one_form_dtl.edt_of_noExit(Sender: TObject);
+var
+  StoreQuery: TMyQuery;
+begin
+  StoreQuery :=FunitUsaha.ValidasiStoreCode('MT_KODE',edt_of_no.Text);
+
+  if Assigned(StoreQuery) and (not StoreQuery.IsEmpty) then
+  begin
+    ShowMessage('Berhasil: ' + StoreQuery.FieldByName('MT_NAMA').AsString);
+    // Lanjutkan dengan penggunaan dataset di sini jika perlu
+  end
+  else
+  begin
+    ShowMessage('Tidak berhasil atau tidak ada data.');
+  end;
+
+  StoreQuery.Free; // Pastikan untuk membebaskan dataset setelah selesai menggunakannya
 end;
 
 end.

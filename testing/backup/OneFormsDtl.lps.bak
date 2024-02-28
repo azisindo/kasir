@@ -11,7 +11,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="26"/>
+        <UsageCount Value="32"/>
       </Unit>
       <Unit>
         <Filename Value="unit_one_forms_dtl.pas"/>
@@ -19,9 +19,10 @@
         <ComponentName Value="form_one_form_dtl"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <TopLine Value="62"/>
-        <CursorPos Y="82"/>
-        <UsageCount Value="26"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="88"/>
+        <CursorPos X="25" Y="91"/>
+        <UsageCount Value="32"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -31,40 +32,16 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="60"/>
         <CursorPos X="23" Y="82"/>
-        <UsageCount Value="26"/>
-      </Unit>
-      <Unit>
-        <Filename Value="../class/class_libstring.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="31"/>
-        <CursorPos X="25" Y="33"/>
-        <UsageCount Value="22"/>
+        <UsageCount Value="32"/>
       </Unit>
       <Unit>
         <Filename Value="model_one_forms_dtl.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="34"/>
-        <CursorPos X="62" Y="52"/>
-        <UsageCount Value="26"/>
+        <TopLine Value="38"/>
+        <CursorPos X="20" Y="55"/>
+        <UsageCount Value="32"/>
         <Loaded Value="True"/>
-      </Unit>
-      <Unit>
-        <Filename Value="model_one_forms.pas"/>
-        <EditorIndex Value="4"/>
-        <TopLine Value="43"/>
-        <CursorPos X="22" Y="48"/>
-        <UsageCount Value="12"/>
-        <Loaded Value="True"/>
-      </Unit>
-      <Unit>
-        <Filename Value="setvar.json"/>
-        <EditorIndex Value="1"/>
-        <CursorPos X="17" Y="3"/>
-        <UsageCount Value="11"/>
-        <Loaded Value="True"/>
-        <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
         <Filename Value="../form/unit_libstring.pas"/>
@@ -72,16 +49,38 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="40"/>
         <CursorPos X="20"/>
-        <UsageCount Value="24"/>
+        <UsageCount Value="30"/>
       </Unit>
       <Unit>
         <Filename Value="../class/class_init_db.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="34"/>
-        <CursorPos X="35" Y="52"/>
-        <UsageCount Value="25"/>
+        <TopLine Value="31"/>
+        <CursorPos X="30" Y="14"/>
+        <UsageCount Value="31"/>
         <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../class/class_libstring.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="31"/>
+        <CursorPos X="25" Y="33"/>
+        <UsageCount Value="21"/>
+      </Unit>
+      <Unit>
+        <Filename Value="model_one_forms.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="43"/>
+        <CursorPos X="22" Y="48"/>
+        <UsageCount Value="11"/>
+      </Unit>
+      <Unit>
+        <Filename Value="setvar.json"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="16" Y="3"/>
+        <UsageCount Value="14"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
         <Filename Value="unit_one_forms.pas"/>
@@ -91,42 +90,19 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="22"/>
         <CursorPos X="37" Y="74"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../class/class_unit_usaha.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="67"/>
+        <CursorPos X="55" Y="73"/>
+        <UsageCount Value="26"/>
+        <Loaded Value="True"/>
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="29" Column="10" TopLine="5"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="30" Column="10" TopLine="5"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="32" Column="10" TopLine="7"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="33" Column="10" TopLine="8"/>
-      </Position>
-      <Position>
-        <Filename Value="model_one_forms_dtl.pas"/>
-        <Caret Line="36" Column="39" TopLine="18"/>
-      </Position>
-      <Position>
-        <Filename Value="model_one_forms_dtl.pas"/>
-        <Caret Line="36" Column="39" TopLine="18"/>
-      </Position>
-      <Position>
-        <Filename Value="model_one_forms_dtl.pas"/>
-        <Caret Line="8" Column="65"/>
-      </Position>
-      <Position>
-        <Filename Value="model_one_forms_dtl.pas"/>
-        <Caret Line="36" Column="36" TopLine="18"/>
-      </Position>
       <Position>
         <Filename Value="model_one_forms_dtl.pas"/>
         <Caret Line="31" Column="40" TopLine="11"/>
@@ -213,7 +189,39 @@
       </Position>
       <Position>
         <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="34" Column="23" TopLine="64"/>
+        <Caret Line="81" Column="30" TopLine="65"/>
+      </Position>
+      <Position>
+        <Filename Value="model_one_forms_dtl.pas"/>
+        <Caret Line="22" Column="37" TopLine="8"/>
+      </Position>
+      <Position>
+        <Filename Value="model_one_forms_dtl.pas"/>
+        <Caret Line="60" TopLine="56"/>
+      </Position>
+      <Position>
+        <Filename Value="../class/class_unit_usaha.pas"/>
+        <Caret Line="17" Column="34"/>
+      </Position>
+      <Position>
+        <Filename Value="../class/class_unit_usaha.pas"/>
+        <Caret Line="21" Column="55" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="../class/class_unit_usaha.pas"/>
+        <Caret Line="53" Column="88" TopLine="41"/>
+      </Position>
+      <Position>
+        <Filename Value="../class/class_unit_usaha.pas"/>
+        <Caret Line="52" Column="41" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_one_forms_dtl.pas"/>
+        <Caret Line="51" Column="21" TopLine="38"/>
+      </Position>
+      <Position>
+        <Filename Value="../class/class_unit_usaha.pas"/>
+        <Caret Line="22" Column="74" TopLine="9"/>
       </Position>
     </JumpHistory>
     <RunParams>
