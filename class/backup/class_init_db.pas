@@ -21,6 +21,7 @@ type
       destructor Destroy; override;
       function InitDB(G_Nik:string;G_Uu_Code_Aktif:string):Boolean;
       function InitLoger:string;
+      function GetPrimaryKey:Integer;
 
 
 
@@ -61,7 +62,34 @@ end;
 
 function TInitDB.InitLoger: string;
 begin
+  Result:= FInitlogger;
+end;
 
+function TInitDB.GetPrimaryKey: Integer;
+var
+  QryGetPk : TMyQuery;
+begin
+  try
+    QryGetPk:= TMyQuery.Create(nil);
+    try
+      QryGetPk.Close;
+      QryGetPk.Connection:= FConnection;
+      QryGetPk.SQL.Text:='SELECT '+g_db1+'.f_get_pk() PK';
+      QryGetPk.Open;
+      if not QryGetPk.IsEmpty then
+         Result:=StrToInt(QryGetPk.FieldByName('pk').AsString)
+      else
+
+    except
+      on E: Exception do
+      begin
+        FInitlogger:='Info Error Call get pk '+E.Message;
+        Raise;
+      end;
+    end;
+  finally
+    QryGetPk.Free;
+  end;
 end;
 
 end.

@@ -8,7 +8,7 @@ uses
   Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, StdCtrls,
   RxDBGrid, MyAccess, unitRMKDBEdit, UnitRMKEdit, unitRMKDBDateEdit,
   unitRMKPanelStandard,class_dbconnection,class_init_db,unit_libstring,model_one_forms_dtl,
-  class_unit_usaha;
+  class_unit_usaha,LCLType,StrUtils;
 
 type
 
@@ -22,6 +22,7 @@ type
     Ds_Form_Head: TMyDataSource;
     ds_one_forms_det: TMyDataSource;
     edt_of_no: TRMKEdit;
+    ed_edit_name: TRMKEdit;
     lbl_nama_form: TLabel;
     lbl_no_form: TLabel;
     lbl_of_tgl_form: TLabel;
@@ -42,8 +43,12 @@ type
     qry_one_form_dtlofd_of_pk: TLongintField;
     qry_one_form_dtlofd_pk: TLongintField;
     rdbg_one_forms_det: TRxDBGrid;
+    procedure Button1Click(Sender: TObject);
     procedure edt_of_noExit(Sender: TObject);
+    procedure KeyDownAll(Sender: TObject; var Key: Word; Shift:TShiftState);
     procedure FormShow(Sender: TObject);
+    procedure Qry_one_formsNewRecord(DataSet: TDataSet);
+    procedure qry_one_form_dtlNewRecord(DataSet: TDataSet);
   private
     FDBConnection: TDBConnection;
     FDBInit:TInitDB;
@@ -86,6 +91,17 @@ begin
   FUnitUsaha:=TUnitUsaha.create(FDBConnection);
 end;
 
+procedure Tform_one_form_dtl.Qry_one_formsNewRecord(DataSet: TDataSet);
+begin
+  DataSet.FieldByName('OF_PK').AsInteger:=FDBInit.GetPrimaryKey;
+end;
+
+procedure Tform_one_form_dtl.qry_one_form_dtlNewRecord(DataSet: TDataSet);
+begin
+  DataSet.FieldByName('OFD_OF_PK').AsInteger:=Qry_one_forms.FieldByName('OF_PK').AsInteger;
+  DataSet.FieldByName('OFD_PK').AsInteger:=FDBInit.GetPrimaryKey;
+end;
+
 procedure Tform_one_form_dtl.edt_of_noExit(Sender: TObject);
 var
   StoreQuery: TMyQuery;
@@ -94,15 +110,58 @@ begin
 
   if Assigned(StoreQuery) and (not StoreQuery.IsEmpty) then
   begin
-    ShowMessage('Berhasil: ' + StoreQuery.FieldByName('MT_NAMA').AsString);
+    ed_edit_name.Text:=StoreQuery.FieldByName('MT_NAMA').AsString;
     // Lanjutkan dengan penggunaan dataset di sini jika perlu
   end
   else
   begin
+    edt_of_no.SetFocus;
     ShowMessage('Tidak berhasil atau tidak ada data.');
   end;
 
   StoreQuery.Free; // Pastikan untuk membebaskan dataset setelah selesai menggunakannya
+end;
+
+procedure Tform_one_form_dtl.Button1Click(Sender: TObject);
+begin
+  Qry_one_forms.Connection.StartTransaction;
+  try
+    Qry_one_forms.Post;
+    Qry_one_forms.Connection.Commit;
+  except
+    on E:Exception do
+    begin
+      ShowMessage('Error gagal save '+E.Message );
+    end;
+  end;
+
+  qry_one_form_dtl.Connection.StartTransaction;
+  try
+    qry_one_form_dtl.Post;
+    qry_one_form_dtl.Connection.Commit;
+  except
+    on E:Exception do
+    begin
+      ShowMessage('Error gagal save dtl '+E.Message );
+    end;
+  end;
+end;
+
+procedure Tform_one_form_dtl.KeyDownAll(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  case Key Of
+      VK_RETURN:
+      begin
+        if (Sender=rdbg_one_forms_det) then
+
+        else
+          SelectNext(ActiveControl,True,True);
+      end;
+
+      VK_F2: ShowMessage('F2');
+      VK_F3: ShowMessage('F3');
+  end;
 end;
 
 end.
