@@ -54,7 +54,7 @@ begin
   Except
     on E: Exception do
     begin
-      FInitlogger:='Info Error : '+E.Message;
+      FInitlogger:='Info Error CALL P_INIT : '+E.Message;
       Result:= False;
     end;
   end;
@@ -77,8 +77,7 @@ begin
       QryGetPk.SQL.Text:='SELECT '+g_db1+'.f_get_pk() PK';
       QryGetPk.Open;
       if not QryGetPk.IsEmpty then
-         Result:=StrToInt(QryGetPk.FieldByName('pk').AsString)
-      else
+         Result:=StrToInt(QryGetPk.FieldByName('pk').AsString);
 
     except
       on E: Exception do

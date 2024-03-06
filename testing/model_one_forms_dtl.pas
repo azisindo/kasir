@@ -19,6 +19,8 @@ type
       constructor Create(DatabaseConnection:TDBConnection);
       destructor Destroy; override;
       procedure baru(QryHead:TMyQuery;QryDet:TMyQuery);
+      function IsavailableHdr(OfKode:string;UuKode:string):TMyQuery;
+      function ReturnSql:string;
 
   end;
 
@@ -54,6 +56,28 @@ begin
   QryDet.SQL.Text:='select * from '+g_db1+'.one_forms_det where ofd_of_pk=0';
   QryDet.Open;
 
+end;
+
+function TModelOneFormsDtl.IsavailableHdr(OfKode: string; UuKode: string
+  ): TMyQuery;
+begin
+  Result:=TMyQuery.Create(nil);
+  Try
+    Result.Close;
+    Result.SQL.Text:='';
+  except
+    on E:Exception do
+    begin
+       ShowMessage('Error occurred in CheckStoreCode: ' + E.Message);
+       Result.Free;
+       Result := nil;
+    end;
+  end;
+end;
+
+function TModelOneFormsDtl.ReturnSql: string;
+begin
+  Result :='sql';
 end;
 
 end.

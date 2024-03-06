@@ -11,7 +11,7 @@ uses
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms, zcomponent, rxnew, unit_one_forms_dtl, class_dbconnection, mydac10,
-  model_one_forms_dtl, class_init_db, unit_libstring, class_unit_usaha ;
+  model_one_forms_dtl, class_init_db, unit_libstring, class_unit_usaha
 
 {$R *.res}
 

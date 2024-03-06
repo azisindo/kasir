@@ -5,7 +5,7 @@ unit class_dbconnection;
 interface
 
 uses
-  Classes, SysUtils,MyAccess,unit_libstring;
+  Classes, SysUtils,MyAccess,unit_libstring,dialogs;
 type
 
   { TDBConnection }
@@ -31,7 +31,6 @@ implementation
 constructor TDBConnection.Create;
 begin
   getvardatabase;
-
   FConnection:= TMyConnection.Create(Nil);
 
   FConnection.Server:=g_hostname;

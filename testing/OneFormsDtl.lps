@@ -8,10 +8,9 @@
         <Filename Value="OneFormsDtl.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="-1"/>
-        <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="37"/>
+        <TopLine Value="3"/>
+        <CursorPos X="73" Y="14"/>
+        <UsageCount Value="54"/>
       </Unit>
       <Unit>
         <Filename Value="unit_one_forms_dtl.pas"/>
@@ -20,9 +19,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="111"/>
-        <CursorPos X="24" Y="123"/>
-        <UsageCount Value="37"/>
+        <TopLine Value="188"/>
+        <CursorPos Y="197"/>
+        <UsageCount Value="54"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -30,17 +29,17 @@
         <Filename Value="../class/class_dbconnection.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="60"/>
-        <CursorPos X="23" Y="82"/>
-        <UsageCount Value="37"/>
+        <TopLine Value="43"/>
+        <CursorPos X="29" Y="73"/>
+        <UsageCount Value="54"/>
       </Unit>
       <Unit>
         <Filename Value="model_one_forms_dtl.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="5"/>
-        <TopLine Value="31"/>
-        <CursorPos X="20" Y="55"/>
-        <UsageCount Value="37"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="54"/>
+        <CursorPos X="32" Y="79"/>
+        <UsageCount Value="54"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -49,46 +48,52 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="40"/>
         <CursorPos X="20"/>
-        <UsageCount Value="35"/>
+        <UsageCount Value="52"/>
       </Unit>
       <Unit>
         <Filename Value="../class/class_init_db.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="4"/>
-        <TopLine Value="61"/>
-        <CursorPos X="25" Y="76"/>
-        <UsageCount Value="36"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="59"/>
+        <CursorPos X="30" Y="81"/>
+        <UsageCount Value="53"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="../class/class_unit_usaha.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="6"/>
-        <TopLine Value="56"/>
-        <CursorPos Y="44"/>
-        <UsageCount Value="31"/>
-        <Loaded Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="52"/>
+        <CursorPos Y="92"/>
+        <UsageCount Value="48"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../sql/seting server cloud.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="35" Y="8"/>
+        <UsageCount Value="37"/>
+        <DefaultSyntaxHighlighter Value="Text"/>
       </Unit>
       <Unit>
         <Filename Value="../class/class_libstring.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="31"/>
         <CursorPos X="25" Y="33"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="20"/>
       </Unit>
       <Unit>
         <Filename Value="model_one_forms.pas"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="49"/>
         <CursorPos X="2" Y="66"/>
         <UsageCount Value="11"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="setvar.json"/>
-        <EditorIndex Value="3"/>
-        <CursorPos X="16" Y="3"/>
-        <UsageCount Value="16"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="25" Y="10"/>
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
@@ -97,134 +102,132 @@
         <ComponentName Value="form_one_form"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="49"/>
-        <CursorPos X="21" Y="56"/>
-        <UsageCount Value="10"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="75"/>
+        <CursorPos X="36" Y="53"/>
+        <UsageCount Value="16"/>
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
       <Position>
-        <Filename Value="../class/class_init_db.pas"/>
-        <Caret Line="49" TopLine="35"/>
-      </Position>
-      <Position>
-        <Filename Value="../class/class_init_db.pas"/>
-        <Caret Line="18" TopLine="14"/>
-      </Position>
-      <Position>
-        <Filename Value="../class/class_init_db.pas"/>
-        <Caret Line="23" Column="33" TopLine="8"/>
+        <Filename Value="unit_one_forms_dtl.pas"/>
+        <Caret Line="171" Column="34" TopLine="155"/>
       </Position>
       <Position>
         <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="64" Column="35" TopLine="43"/>
+        <Caret Line="172" Column="34" TopLine="156"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_one_forms_dtl.pas"/>
+        <Caret Line="171" Column="34" TopLine="155"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_one_forms_dtl.pas"/>
+        <Caret Line="172" Column="34" TopLine="156"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_one_forms_dtl.pas"/>
+        <Caret Line="171" Column="34" TopLine="155"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_one_forms_dtl.pas"/>
+        <Caret Line="172" Column="34" TopLine="156"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_one_forms_dtl.pas"/>
+        <Caret Line="171" Column="34" TopLine="155"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_one_forms_dtl.pas"/>
+        <Caret Line="76" Column="32" TopLine="73"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_one_forms_dtl.pas"/>
+        <Caret Line="67" Column="15" TopLine="64"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_one_forms_dtl.pas"/>
+        <Caret Line="68" Column="15" TopLine="65"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_one_forms_dtl.pas"/>
+        <Caret Line="67" Column="15" TopLine="64"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_one_forms_dtl.pas"/>
+        <Caret Line="66" Column="15" TopLine="63"/>
       </Position>
       <Position>
         <Filename Value="model_one_forms_dtl.pas"/>
-        <Caret Line="21" Column="22" TopLine="4"/>
+        <Caret Line="52" Column="13" TopLine="36"/>
       </Position>
       <Position>
         <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="54" Column="3" TopLine="44"/>
+        <Caret Line="109" Column="40" TopLine="95"/>
       </Position>
       <Position>
         <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="66" Column="3" TopLine="13"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="72" Column="3" TopLine="49"/>
+        <Caret Line="131" Column="42" TopLine="108"/>
       </Position>
       <Position>
         <Filename Value="model_one_forms_dtl.pas"/>
-        <Caret Line="47" Column="7" TopLine="26"/>
+        <Caret Line="22" Column="45" TopLine="14"/>
       </Position>
       <Position>
         <Filename Value="model_one_forms_dtl.pas"/>
-        <Caret Line="51" Column="31" TopLine="37"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="81" Column="30" TopLine="65"/>
+        <Caret Line="67" Column="12" TopLine="49"/>
       </Position>
       <Position>
         <Filename Value="model_one_forms_dtl.pas"/>
-        <Caret Line="22" Column="37" TopLine="8"/>
+        <Caret Line="69" Column="12" TopLine="52"/>
       </Position>
       <Position>
         <Filename Value="model_one_forms_dtl.pas"/>
-        <Caret Line="60" TopLine="56"/>
-      </Position>
-      <Position>
-        <Filename Value="../class/class_unit_usaha.pas"/>
-        <Caret Line="17" Column="34"/>
-      </Position>
-      <Position>
-        <Filename Value="../class/class_unit_usaha.pas"/>
-        <Caret Line="21" Column="55" TopLine="10"/>
-      </Position>
-      <Position>
-        <Filename Value="../class/class_unit_usaha.pas"/>
-        <Caret Line="53" Column="88" TopLine="41"/>
-      </Position>
-      <Position>
-        <Filename Value="../class/class_unit_usaha.pas"/>
-        <Caret Line="52" Column="41" TopLine="45"/>
+        <Caret Line="65" Column="36" TopLine="54"/>
       </Position>
       <Position>
         <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="51" Column="21" TopLine="38"/>
+        <Caret Line="160" Column="6" TopLine="149"/>
       </Position>
       <Position>
-        <Filename Value="../class/class_unit_usaha.pas"/>
-        <Caret Line="22" Column="74" TopLine="9"/>
+        <Filename Value="model_one_forms_dtl.pas"/>
+        <Caret Line="23" Column="31" TopLine="16"/>
       </Position>
       <Position>
-        <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="104" Column="24" TopLine="89"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="48" Column="74" TopLine="35"/>
+        <Filename Value="model_one_forms_dtl.pas"/>
+        <Caret Line="80" Column="17" TopLine="60"/>
       </Position>
       <Position>
         <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="12" Column="36"/>
+        <Caret Line="167" Column="45" TopLine="146"/>
       </Position>
       <Position>
         <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="99" Column="5" TopLine="89"/>
+        <Caret Line="155" TopLine="153"/>
       </Position>
       <Position>
         <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="100" Column="5" TopLine="90"/>
+        <Caret Line="165" Column="56" TopLine="155"/>
       </Position>
       <Position>
         <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="102" TopLine="89"/>
+        <Caret Line="158" TopLine="145"/>
       </Position>
       <Position>
         <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="82" Column="40" TopLine="61"/>
+        <Caret Line="173" Column="29" TopLine="110"/>
       </Position>
       <Position>
         <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="100" Column="44" TopLine="84"/>
-      </Position>
-      <Position>
-        <Filename Value="../class/class_init_db.pas"/>
-        <Caret Line="24" Column="16" TopLine="17"/>
+        <Caret Line="184" Column="5" TopLine="177"/>
       </Position>
       <Position>
         <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="103" Column="55" TopLine="88"/>
+        <Caret Line="179" Column="7" TopLine="170"/>
       </Position>
       <Position>
         <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="147" Column="41" TopLine="129"/>
+        <Caret Line="183" Column="9" TopLine="173"/>
       </Position>
     </JumpHistory>
     <RunParams>

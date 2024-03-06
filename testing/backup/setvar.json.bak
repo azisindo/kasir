@@ -1,5 +1,5 @@
 {
- "host": "192.168.1.2",
+ "host": "localhost",
  "port": 3306,
  "database": "laz",
  "username": "root",
@@ -10,5 +10,5 @@
  "database3": "ms",
  "dirlinux": "//usr//lib//",
  "dirwindows": "D:\\APP\\MYSQL\\",
- "cafile": "//usr//lib//"
+ "cafile": "//home//developer//project//kasir//sql//"
 }

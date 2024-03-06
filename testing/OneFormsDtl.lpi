@@ -87,6 +87,10 @@
         <Filename Value="../class/class_unit_usaha.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="../sql/seting server cloud.txt"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

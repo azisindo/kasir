@@ -19,7 +19,8 @@ type
       constructor Create(DatabaseConnection:TDBConnection);
       destructor Destroy; override;
       procedure baru(QryHead:TMyQuery;QryDet:TMyQuery);
-      function  CekKodeToko:Boolean;
+      function IsavailableHdr(OfKode:string;UuKode:string):TMyQuery;
+      function ReturnSql:string;
 
   end;
 
@@ -57,21 +58,26 @@ begin
 
 end;
 
-function TModelOneFormsDtl.CekKodeToko: Boolean;
-var
-  QryToko : TMyQuery;
+function TModelOneFormsDtl.IsavailableHdr(OfKode: string; UuKode: string
+  ): TMyQuery;
 begin
-  QryToko:= TMyQuery.Create(nil);
+  Result:=TMyQuery.Create(nil);
+  Try
+    Result.Close;
+    Result.SQL.Text:='';
+  except
+    on E:Exception do
+    begin
+       ShowMessage('Error occurred in CheckStoreCode: ' + E.Message);
+       Result.Free;
+       Result := nil;
+    end;
+  end;
+end;
 
-  QryToko.Close;
-  QryToko.Connection:=FConnection;
-  QryToko.SQL.Text:='';
-  QryToko.Open;
-
-  if QryToko.IsEmpty then
-     Result:= True
-  else
-     Result:= False;
+function TModelOneFormsDtl.ReturnSql: string;
+begin
+  retur :='sql';
 end;
 
 end.

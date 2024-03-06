@@ -1,0 +1,10 @@
+mysql Cloud azis
+file CA := \project\kasir\sql
+
+Database name : defaultdb
+Host : mysql-310e8172-aziz-a116.a.aivencloud.com
+Port : 23594
+User : avnadmin
+Password :AVNS_uND_gqwo-_83akDjp7P
+
+
