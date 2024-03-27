@@ -1,0 +1,201 @@
+object form_list_of_values: Tform_list_of_values
+  Left = 1520
+  Height = 392
+  Top = 250
+  Width = 457
+  ClientHeight = 392
+  ClientWidth = 457
+  object pnl_all: TRMKPanelStandard
+    Left = 9
+    Height = 374
+    Top = 9
+    Width = 439
+    Align = alClient
+    BorderSpacing.Left = 9
+    BorderSpacing.Top = 9
+    BorderSpacing.Right = 9
+    BorderSpacing.Bottom = 9
+    BevelOuter = bvNone
+    ClientHeight = 374
+    ClientWidth = 439
+    TabOrder = 0
+    object pnl_top: TRMKPanelStandard
+      Left = 0
+      Height = 34
+      Top = 0
+      Width = 439
+      Align = alTop
+      BevelOuter = bvNone
+      Caption = 'pnl_top'
+      ClientHeight = 34
+      ClientWidth = 439
+      TabOrder = 0
+      object ed_search: TEdit
+        Left = 0
+        Height = 34
+        Top = 0
+        Width = 404
+        Align = alClient
+        BorderStyle = bsNone
+        Font.Color = clGray
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        ParentFont = False
+        ParentShowHint = False
+        TabOrder = 0
+        TextHint = 'Search'
+      end
+      object SpeedButton1: TSpeedButton
+        Left = 404
+        Height = 34
+        Top = 0
+        Width = 35
+        Align = alRight
+        Color = clGradientActiveCaption
+        Flat = True
+        Glyph.Data = {
+          46050000424D4605000000000000360000002800000012000000120000000100
+          20000000000010050000640000006400000000000000000000006C6C6C006C6C
+          6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C
+          6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C016C6C6C6B6C6C
+          6C386C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C
+          6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C
+          6C9C6C6C6CFF6C6C6C746C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C
+          6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C
+          6C006C6C6C956C6C6CFF6C6C6C996C6C6C116C6C6C006C6C6C006C6C6C006C6C
+          6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C
+          6C006C6C6C006C6C6C966C6C6CFF6C6C6C906C6C6C006C6C6C006C6C6C006C6C
+          6C006C6C6C006C6C6C006C6C6C026C6C6C4D6C6C6C8D6C6C6C936C6C6C5A6C6C
+          6C136C6C6C006C6C6C006C6C6C9A6C6C6CFF6C6C6C8E6C6C6C006C6C6C006C6C
+          6C006C6C6C006C6C6C006C6C6C006C6C6C5D6C6C6CFD6C6C6CFF6C6C6CFF6C6C
+          6CFF6C6C6CFF6C6C6CFF6C6C6C6F6C6C6C856C6C6CFF6C6C6C8C6C6C6C006C6C
+          6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C7E6C6C6CFF6C6C6CDF6C6C
+          6C576C6C6C1B6C6C6C136C6C6C456C6C6CB96C6C6CFF6C6C6CFF6C6C6C766C6C
+          6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C416C6C6CFF6C6C
+          6CB06C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C706C6C
+          6CFF6C6C6C666C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C0B6C6C
+          6CEA6C6C6CF86C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C
+          6C006C6C6C006C6C6CBF6C6C6CFF6C6C6C0E6C6C6C006C6C6C006C6C6C006C6C
+          6C006C6C6C5B6C6C6CFF6C6C6C826C6C6C006C6C6C006C6C6C006C6C6C006C6C
+          6C006C6C6C006C6C6C006C6C6C006C6C6C346C6C6CFF6C6C6C606C6C6C006C6C
+          6C006C6C6C006C6C6C006C6C6C8E6C6C6CFF6C6C6C426C6C6C006C6C6C006C6C
+          6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C096C6C6CFF6C6C
+          6C996C6C6C006C6C6C006C6C6C006C6C6C006C6C6C876C6C6CFF6C6C6C486C6C
+          6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C
+          6C0E6C6C6CFF6C6C6C906C6C6C006C6C6C006C6C6C006C6C6C006C6C6C486C6C
+          6CFF6C6C6C9F6C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C
+          6C006C6C6C006C6C6C4E6C6C6CFF6C6C6C4B6C6C6C006C6C6C006C6C6C006C6C
+          6C006C6C6C026C6C6CCD6C6C6CFF6C6C6C126C6C6C006C6C6C006C6C6C006C6C
+          6C006C6C6C006C6C6C006C6C6C006C6C6CE36C6C6CFF6C6C6C036C6C6C006C6C
+          6C006C6C6C006C6C6C006C6C6C006C6C6C206C6C6CFF6C6C6CE66C6C6C1C6C6C
+          6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6CAC6C6C6CFF6C6C6C576C6C
+          6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C4E6C6C
+          6CFF6C6C6CFF6C6C6CA16C6C6C546C6C6C496C6C6C856C6C6CFC6C6C6CFF6C6C
+          6C7C6C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C
+          6C006C6C6C006C6C6C2C6C6C6CC06C6C6CFF6C6C6CFF6C6C6CFF6C6C6CFF6C6C
+          6CDA6C6C6C4C6C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C
+          6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C6C476C6C6C7D6C6C
+          6C866C6C6C566C6C6C0B6C6C6C006C6C6C006C6C6C006C6C6C006C6C6C006C6C
+          6C006C6C6C006C6C6C00
+        }
+      end
+    end
+    object pnl_tengah: TRMKPanelStandard
+      Left = 0
+      Height = 306
+      Top = 34
+      Width = 439
+      Align = alClient
+      BevelOuter = bvNone
+      ClientHeight = 306
+      ClientWidth = 439
+      TabOrder = 1
+      object dbg_list_of_values: TRxDBGrid
+        Left = 0
+        Height = 306
+        Top = 0
+        Width = 439
+        ColumnDefValues.BlobText = '(blob)'
+        TitleButtons = False
+        AutoSort = True
+        KeyStrokes = <        
+          item
+            Command = rxgcShowFindDlg
+            ShortCut = 16454
+            Enabled = True
+          end        
+          item
+            Command = rxgcShowColumnsDlg
+            ShortCut = 16471
+            Enabled = True
+          end        
+          item
+            Command = rxgcShowFilterDlg
+            ShortCut = 16468
+            Enabled = True
+          end        
+          item
+            Command = rxgcShowSortDlg
+            ShortCut = 16467
+            Enabled = True
+          end        
+          item
+            Command = rxgcShowQuickFilter
+            ShortCut = 16465
+            Enabled = True
+          end        
+          item
+            Command = rxgcHideQuickFilter
+            ShortCut = 16456
+            Enabled = True
+          end        
+          item
+            Command = rxgcSelectAll
+            ShortCut = 16449
+            Enabled = True
+          end        
+          item
+            Command = rxgcDeSelectAll
+            ShortCut = 16429
+            Enabled = True
+          end        
+          item
+            Command = rxgcInvertSelection
+            ShortCut = 16426
+            Enabled = True
+          end        
+          item
+            Command = rxgcOptimizeColumnsWidth
+            ShortCut = 16427
+            Enabled = True
+          end        
+          item
+            Command = rxgcCopyCellValue
+            ShortCut = 16451
+            Enabled = True
+          end>
+        FooterOptions.DrawFullLine = False
+        SearchOptions.QuickSearchOptions = [loCaseInsensitive, loPartialKey]
+        SearchOptions.FromStart = False
+        OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
+        Align = alClient
+        Color = clWindow
+        DrawFullLine = False
+        FocusColor = clRed
+        SelectedColor = clHighlight
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+        TabOrder = 0
+      end
+    end
+    object pnl_bottom: TRMKPanelStandard
+      Left = 0
+      Height = 34
+      Top = 340
+      Width = 439
+      Align = alBottom
+      BevelOuter = bvNone
+      Caption = 'bawah'
+      TabOrder = 2
+    end
+  end
+end

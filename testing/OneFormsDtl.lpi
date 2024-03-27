@@ -25,6 +25,9 @@
     </RunParams>
     <RequiredPackages>
       <Item>
+        <PackageName Value="RMKPanelWarna"/>
+      </Item>
+      <Item>
         <PackageName Value="FCL"/>
       </Item>
       <Item>
@@ -91,6 +94,16 @@
         <Filename Value="../sql/seting server cloud.txt"/>
         <IsPartOfProject Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="perintah git.txt"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../lov/unit_list_of_values.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="form_list_of_values"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -100,7 +113,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="../class;../form"/>
+      <OtherUnitFiles Value="../class;../form;../lov"/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>

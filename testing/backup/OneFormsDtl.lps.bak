@@ -7,10 +7,10 @@
       <Unit>
         <Filename Value="OneFormsDtl.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="3"/>
-        <CursorPos X="73" Y="14"/>
-        <UsageCount Value="54"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="36" Y="19"/>
+        <UsageCount Value="125"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="unit_one_forms_dtl.pas"/>
@@ -18,28 +18,28 @@
         <ComponentName Value="form_one_form_dtl"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="179"/>
-        <CursorPos X="31" Y="182"/>
-        <UsageCount Value="54"/>
+        <TopLine Value="137"/>
+        <CursorPos X="13" Y="145"/>
+        <UsageCount Value="125"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="../class/class_dbconnection.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="43"/>
-        <CursorPos X="29" Y="73"/>
-        <UsageCount Value="54"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="49"/>
+        <CursorPos X="28" Y="49"/>
+        <UsageCount Value="125"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="model_one_forms_dtl.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="3"/>
-        <TopLine Value="54"/>
-        <CursorPos X="32" Y="79"/>
-        <UsageCount Value="54"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="167"/>
+        <CursorPos X="29" Y="171"/>
+        <UsageCount Value="125"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -48,15 +48,15 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="40"/>
         <CursorPos X="20"/>
-        <UsageCount Value="52"/>
+        <UsageCount Value="123"/>
       </Unit>
       <Unit>
         <Filename Value="../class/class_init_db.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="59"/>
-        <CursorPos X="30" Y="81"/>
-        <UsageCount Value="53"/>
+        <TopLine Value="63"/>
+        <CursorPos X="48" Y="75"/>
+        <UsageCount Value="124"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -65,14 +65,22 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="52"/>
         <CursorPos Y="92"/>
-        <UsageCount Value="48"/>
+        <UsageCount Value="119"/>
       </Unit>
       <Unit>
         <Filename Value="../sql/seting server cloud.txt"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="35" Y="8"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="108"/>
+        <DefaultSyntaxHighlighter Value="Text"/>
+      </Unit>
+      <Unit>
+        <Filename Value="perintah git.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="15" Y="6"/>
+        <UsageCount Value="92"/>
         <DefaultSyntaxHighlighter Value="Text"/>
       </Unit>
       <Unit>
@@ -80,20 +88,20 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="31"/>
         <CursorPos X="25" Y="33"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="13"/>
       </Unit>
       <Unit>
         <Filename Value="model_one_forms.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="49"/>
         <CursorPos X="2" Y="66"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="setvar.json"/>
-        <EditorIndex Value="2"/>
-        <CursorPos X="25" Y="10"/>
-        <UsageCount Value="23"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="38" Y="8"/>
+        <UsageCount Value="59"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
@@ -105,129 +113,164 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="75"/>
         <CursorPos X="36" Y="53"/>
-        <UsageCount Value="16"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../../Devart MyDAC/Source/MyAccess.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="8"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../../fpcupdeluxe/fpcsrc/packages/fcl-db/src/base/db.pas"/>
+        <UnitName Value="DB"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="28"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../lov/ulov.pas"/>
+        <ComponentName Value="FrmLov"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ULov"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="37"/>
+        <CursorPos X="29" Y="60"/>
+        <UsageCount Value="19"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../lov/unit_list_of_values.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="form_list_of_values"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="4"/>
+        <CursorPos X="25"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../component/uselov/upurchaseorder.pas"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="112"/>
+        <CursorPos X="48" Y="10"/>
+        <UsageCount Value="10"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="29">
+    <JumpHistory HistoryIndex="26">
       <Position>
         <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="171" Column="34" TopLine="155"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="172" Column="34" TopLine="156"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="171" Column="34" TopLine="155"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="172" Column="34" TopLine="156"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="171" Column="34" TopLine="155"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="172" Column="34" TopLine="156"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="171" Column="34" TopLine="155"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="76" Column="32" TopLine="73"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="67" Column="15" TopLine="64"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="68" Column="15" TopLine="65"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="67" Column="15" TopLine="64"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="66" Column="15" TopLine="63"/>
+        <Caret Line="178" Column="37" TopLine="166"/>
       </Position>
       <Position>
         <Filename Value="model_one_forms_dtl.pas"/>
-        <Caret Line="52" Column="13" TopLine="36"/>
+        <Caret Line="29" Column="56" TopLine="12"/>
       </Position>
       <Position>
         <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="109" Column="40" TopLine="95"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="131" Column="42" TopLine="108"/>
+        <Caret Line="121" Column="52" TopLine="101"/>
       </Position>
       <Position>
         <Filename Value="model_one_forms_dtl.pas"/>
-        <Caret Line="22" Column="45" TopLine="14"/>
+        <Caret Line="30" Column="35" TopLine="9"/>
       </Position>
       <Position>
         <Filename Value="model_one_forms_dtl.pas"/>
-        <Caret Line="67" Column="12" TopLine="49"/>
+        <Caret Line="31" Column="65" TopLine="25"/>
       </Position>
       <Position>
         <Filename Value="model_one_forms_dtl.pas"/>
-        <Caret Line="69" Column="12" TopLine="52"/>
+        <Caret Line="83" Column="64" TopLine="74"/>
       </Position>
       <Position>
         <Filename Value="model_one_forms_dtl.pas"/>
-        <Caret Line="65" Column="36" TopLine="54"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="160" Column="6" TopLine="149"/>
+        <Caret Line="119" TopLine="102"/>
       </Position>
       <Position>
         <Filename Value="model_one_forms_dtl.pas"/>
-        <Caret Line="23" Column="31" TopLine="16"/>
+        <Caret Line="34" Column="45" TopLine="22"/>
       </Position>
       <Position>
         <Filename Value="model_one_forms_dtl.pas"/>
-        <Caret Line="80" Column="17" TopLine="60"/>
+        <Caret Line="87" Column="62" TopLine="76"/>
+      </Position>
+      <Position>
+        <Filename Value="model_one_forms_dtl.pas"/>
+        <Caret Line="116" Column="66" TopLine="92"/>
       </Position>
       <Position>
         <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="167" Column="45" TopLine="146"/>
+        <Caret Line="95" Column="2" TopLine="78"/>
+      </Position>
+      <Position>
+        <Filename Value="../class/class_init_db.pas"/>
+        <Caret Line="76" TopLine="63"/>
       </Position>
       <Position>
         <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="155" TopLine="153"/>
+        <Caret Line="107" Column="57" TopLine="87"/>
+      </Position>
+      <Position>
+        <Filename Value="model_one_forms_dtl.pas"/>
+        <Caret Line="31" Column="42" TopLine="17"/>
       </Position>
       <Position>
         <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="165" Column="56" TopLine="155"/>
+        <Caret Line="57" Column="58"/>
+      </Position>
+      <Position>
+        <Filename Value="model_one_forms_dtl.pas"/>
+        <Caret Line="16" Column="41" TopLine="2"/>
       </Position>
       <Position>
         <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="158" TopLine="145"/>
+        <Caret Line="109" Column="5" TopLine="98"/>
+      </Position>
+      <Position>
+        <Filename Value="../class/class_init_db.pas"/>
+        <Caret Line="75" Column="48" TopLine="63"/>
+      </Position>
+      <Position>
+        <Filename Value="model_one_forms_dtl.pas"/>
+        <Caret Line="35" Column="49" TopLine="27"/>
       </Position>
       <Position>
         <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="173" Column="29" TopLine="110"/>
+        <Caret Line="136" Column="39" TopLine="111"/>
+      </Position>
+      <Position>
+        <Filename Value="../lov/unit_list_of_values.pas"/>
+        <Caret Line="28" Column="68" TopLine="3"/>
       </Position>
       <Position>
         <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="184" Column="5" TopLine="177"/>
+        <Caret Line="171" Column="7" TopLine="151"/>
       </Position>
       <Position>
         <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="179" Column="7" TopLine="170"/>
+        <Caret Line="177" Column="7" TopLine="157"/>
       </Position>
       <Position>
         <Filename Value="unit_one_forms_dtl.pas"/>
-        <Caret Line="183" Column="9" TopLine="173"/>
+        <Caret Line="31" Column="82" TopLine="119"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_one_forms_dtl.pas"/>
+        <Caret Line="145" Column="27" TopLine="140"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_one_forms_dtl.pas"/>
+        <Caret Line="146" Column="46" TopLine="131"/>
+      </Position>
+      <Position>
+        <Filename Value="../lov/unit_list_of_values.pas"/>
+        <Caret Column="25" TopLine="4"/>
       </Position>
     </JumpHistory>
     <RunParams>

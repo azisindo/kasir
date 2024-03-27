@@ -1,18 +1,19 @@
 object form_one_form_dtl: Tform_one_form_dtl
   Left = 1520
-  Height = 539
+  Height = 528
   Top = 250
-  Width = 790
+  Width = 774
   Caption = 'Forms Master Forms'
-  ClientHeight = 539
-  ClientWidth = 790
-  DesignTimePPI = 98
+  ClientHeight = 528
+  ClientWidth = 774
+  OnClose = FormClose
   OnShow = FormShow
+  Position = poDesktopCenter
   object dbe_ofNama: TRMKDBEdit
-    Left = 261
+    Left = 256
     Height = 24
-    Top = 101
-    Width = 229
+    Top = 99
+    Width = 224
     DataField = 'of_nama'
     DataSource = Ds_Form_Head
     MaxLength = 0
@@ -21,10 +22,10 @@ object form_one_form_dtl: Tform_one_form_dtl
     MudarColor = 14087422
   end
   object edt_of_no: TRMKEdit
-    Left = 261
+    Left = 256
     Height = 24
-    Top = 41
-    Width = 82
+    Top = 40
+    Width = 80
     TabOrder = 0
     OnExit = edt_of_noExit
     OnKeyDown = KeyDownAll
@@ -32,10 +33,10 @@ object form_one_form_dtl: Tform_one_form_dtl
     CampoObrigatorio = False
   end
   object dbe_of_tgl_form: TRMKDBDateEdit
-    Left = 261
+    Left = 256
     Height = 24
-    Top = 128
-    Width = 135
+    Top = 125
+    Width = 132
     CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
     DefaultToday = True
     DateOrder = doDMY
@@ -52,31 +53,31 @@ object form_one_form_dtl: Tform_one_form_dtl
     MudarColor = 14087422
   end
   object lbl_no_form: TLabel
-    Left = 155
+    Left = 152
     Height = 17
-    Top = 48
-    Width = 82
+    Top = 47
+    Width = 81
     Caption = 'Nomor Form'
   end
   object lbl_nama_form: TLabel
-    Left = 155
+    Left = 152
     Height = 17
-    Top = 108
+    Top = 106
     Width = 76
     Caption = 'Nama Form'
   end
   object lbl_of_tgl_form: TLabel
-    Left = 155
+    Left = 152
     Height = 17
-    Top = 135
-    Width = 90
+    Top = 132
+    Width = 87
     Caption = 'Tanggal Form'
   end
   object rdbg_one_forms_det: TRxDBGrid
     Left = 0
-    Height = 325
-    Top = 179
-    Width = 790
+    Height = 318
+    Top = 176
+    Width = 774
     ColumnDefValues.BlobText = '(blob)'
     TitleButtons = False
     AutoSort = True
@@ -180,44 +181,44 @@ object form_one_form_dtl: Tform_one_form_dtl
   end
   object pnl_bawah: TRMKPanelStandard
     Left = 0
-    Height = 35
-    Top = 504
-    Width = 790
+    Height = 34
+    Top = 494
+    Width = 774
     Align = alBottom
     TabOrder = 7
   end
   object pnl_atas: TRMKPanelStandard
     Left = 0
-    Height = 35
+    Height = 34
     Top = 0
-    Width = 790
+    Width = 774
     Align = alTop
     TabOrder = 6
   end
   object Button1: TButton
-    Left = 666
-    Height = 26
-    Top = 135
-    Width = 77
+    Left = 644
+    Height = 25
+    Top = 100
+    Width = 75
     Caption = 'Button1'
     TabOrder = 8
     OnClick = Button1Click
   end
   object ed_edit_name: TRMKEdit
-    Left = 347
+    Left = 340
     Height = 24
-    Top = 72
-    Width = 433
+    Top = 71
+    Width = 424
     TabOrder = 2
     OnKeyDown = KeyDownAll
     MudarColor = 14087422
     CampoObrigatorio = False
   end
   object dbe_of_uu: TRMKDBEdit
-    Left = 261
+    Left = 256
     Height = 24
-    Top = 72
-    Width = 82
+    Top = 71
+    Width = 80
     DataField = 'of_uu_code'
     DataSource = Ds_Form_Head
     MaxLength = 0
@@ -227,11 +228,35 @@ object form_one_form_dtl: Tform_one_form_dtl
     MudarColor = 14087422
   end
   object lbl_kode_cabang: TLabel
-    Left = 157
+    Left = 154
     Height = 17
-    Top = 80
-    Width = 90
+    Top = 78
+    Width = 85
     Caption = 'Kode Cabang'
+  end
+  object Button2: TButton
+    Left = 512
+    Height = 25
+    Top = 100
+    Width = 75
+    Caption = 'Button2'
+    TabOrder = 9
+    OnClick = Button2Click
+  end
+  object simpan: TRMKPanelWarna
+    Left = 588
+    Height = 38
+    Top = 128
+    Width = 170
+    BevelOuter = bvNone
+    Caption = 'simpan'
+    Color = clInfoBk
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 10
+    OnClick = simpanClick
+    CorInicial = clInfoBk
+    CorMouseSob = clHotLight
   end
   object ConnMyDb: TMyConnection
     Username = 'root'
@@ -248,7 +273,7 @@ object form_one_form_dtl: Tform_one_form_dtl
     FilterOptions = []
     OnNewRecord = Qry_one_formsNewRecord
     Left = 20
-    Top = 29
+    Top = 28
     object Qry_one_formsof_pk: TLongintField
       FieldKind = fkData
       FieldName = 'of_pk'
@@ -325,7 +350,7 @@ object form_one_form_dtl: Tform_one_form_dtl
   object Ds_Form_Head: TMyDataSource
     DataSet = Qry_one_forms
     Left = 20
-    Top = 49
+    Top = 48
   end
   object qry_one_form_dtl: TMyQuery
     Connection = ConnMyDb
@@ -334,8 +359,8 @@ object form_one_form_dtl: Tform_one_form_dtl
     )
     FilterOptions = []
     OnNewRecord = qry_one_form_dtlNewRecord
-    Left = 69
-    Top = 37
+    Left = 68
+    Top = 36
     object qry_one_form_dtlofd_of_pk: TLongintField
       FieldKind = fkData
       FieldName = 'ofd_of_pk'
@@ -402,7 +427,7 @@ object form_one_form_dtl: Tform_one_form_dtl
   end
   object ds_one_forms_det: TMyDataSource
     DataSet = qry_one_form_dtl
-    Left = 69
-    Top = 57
+    Left = 68
+    Top = 56
   end
 end

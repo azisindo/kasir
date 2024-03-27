@@ -31,7 +31,6 @@ implementation
 constructor TDBConnection.Create;
 begin
   getvardatabase;
-  ShowMessage(g_dir_ca_file);
   FConnection:= TMyConnection.Create(Nil);
 
   FConnection.Server:=g_hostname;

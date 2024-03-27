@@ -5,10 +5,11 @@ unit unit_one_forms_dtl;
 interface
 
 uses
-  Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  RxDBGrid, rxtooledit, MyAccess, unitRMKDBEdit, UnitRMKEdit, unitRMKDBDateEdit,
-  unitRMKPanelStandard,class_dbconnection,class_init_db,unit_libstring,model_one_forms_dtl,
-  class_unit_usaha,LCLType, EditBtn, DBCtrls, DBExtCtrls,StrUtils;
+  Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, StdCtrls, RxDBGrid,
+  rxtooledit, MyAccess, unitRMKDBEdit, UnitRMKEdit, unitRMKDBDateEdit,
+  unitRMKPanelStandard, unitRMKPanelWarna, class_dbconnection, class_init_db,
+  unit_libstring, model_one_forms_dtl, class_unit_usaha, LCLType, EditBtn,
+  DBCtrls, DBExtCtrls, StrUtils,unit_list_of_values;
 
 type
 
@@ -16,6 +17,7 @@ type
 
   Tform_one_form_dtl = class(TForm)
     Button1: TButton;
+    Button2: TButton;
     ConnMyDb: TMyConnection;
     dbe_ofNama: TRMKDBEdit;
     dbe_of_tgl_form: TRMKDBDateEdit;
@@ -46,16 +48,20 @@ type
     qry_one_form_dtlofd_of_pk: TLongintField;
     qry_one_form_dtlofd_pk: TLongintField;
     rdbg_one_forms_det: TRxDBGrid;
+    simpan: TRMKPanelWarna;
     procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
     procedure dbe_of_uuExit(Sender: TObject);
     procedure edt_of_noExit(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure KeyDownAll(Sender: TObject; var Key: Word; Shift:TShiftState);
     procedure FormShow(Sender: TObject);
     procedure Qry_one_formsNewRecord(DataSet: TDataSet);
     procedure qry_one_form_dtlNewRecord(DataSet: TDataSet);
+    procedure simpanClick(Sender: TObject);
   private
     FDBConnection: TDBConnection;
-    FDBInit:TInitDB;
+    //FDBInit:TInitDB;
     FModelOneFormsDtl:TModelOneFormsDtl;
     FunitUsaha:TUnitUsaha;
 
@@ -81,16 +87,10 @@ begin
     ShowMessage(FDBConnection.logger);
     exit;
   end;
-  //inisialisasi seting db
-  FDBInit:=TInitDB.Create(FDBConnection);
-  if not FDBInit.InitDB('1234','2000') then
-    begin
-      ShowMessage(FDBInit.InitLoger);
-      Abort;
-    end;
 
   //form model dtl.
   FModelOneFormsDtl:=TModelOneFormsDtl.Create(FDBConnection);
+  FModelOneFormsDtl.InisialisasiUser('1234','2000');
   FModelOneFormsDtl.baru(Qry_one_forms,qry_one_form_dtl);
 
   //inisilisasi master Store
@@ -99,44 +99,69 @@ end;
 
 procedure Tform_one_form_dtl.Qry_one_formsNewRecord(DataSet: TDataSet);
 begin
-  DataSet.FieldByName('OF_PK').AsInteger:=FDBInit.GetPrimaryKey;
+  FModelOneFormsDtl.NewRecordHdr(DataSet);
 end;
 
 procedure Tform_one_form_dtl.qry_one_form_dtlNewRecord(DataSet: TDataSet);
 begin
+  FModelOneFormsDtl.NewRecordDtl(DataSet);
+end;
 
-  DataSet.FieldByName('OFD_OF_PK').AsInteger:=Qry_one_forms.FieldByName('OF_PK').AsInteger;
-  DataSet.FieldByName('OFD_PK').AsInteger:=FDBInit.GetPrimaryKey;
+procedure Tform_one_form_dtl.simpanClick(Sender: TObject);
+var
+  lov: Tform_list_of_values;
+  simpanpos:TPoint;
+begin
+
+   //VK_F2:
+   // begin
+   //   if (sender=ed_store_id) then
+   //   begin
+   //     ed_store_idPos := ed_store_id.ClientToScreen(Point(0, 0));
+   //
+   //     try
+   //       vSqlForms :='Select msf_id,ms_descp from '+SetVarGlobal.Db1  +'.ms_forms ';
+   //
+   //       FrmLov.Caption :='Lov Master Unit Usaha';
+   //       FrmLov.SqlLov  := vSqlForms;
+   //       FrmLov.SetJudulLov :='Judul Lov;Id Forms;150;L;Desc;300;L';
+   //       FrmLov.Left    := ed_store_idPos.X;
+   //       FrmLov.Top     := ed_store_idPos.Y ;//+ ed_store_idPos.height;
+   //       FrmLov.ShowModal;
+   //       LValues:=FrmLov.LovSelectedValues;
+   //
+   //       if LValues.count=0 then
+   //          ShowMessage('LOV tidak ada yang di pilih');
+   //
+   //       ShowMessage('bug');
+   //
+   //       ed_store_id.Text   :=LValues[0];
+   //       ed_store_name.Text :=LValues[1];;
+   //     finally
+   //       FrmLov.Free;
+   //     end;
+   //
+   //   end;
+   // end;
+  simpanpos:=simpan.ClientToScreen(Point(0, 0));;
+  lov:=Tform_list_of_values.Create(self);
+  lov.Caption :='LOV Master Unit Usaha';
+  lov.Left    := simpanpos.X;
+  lov.Top     := simpanpos.Y ;//+ ed_store_idPos.height;
+
+  lov.ShowModal;
+
 end;
 
 
 procedure Tform_one_form_dtl.Button1Click(Sender: TObject);
 begin
-  Qry_one_forms.Edit;
-  Qry_one_forms.FieldByName('of_kode').AsString:=edt_of_no.Text;
+  FModelOneFormsDtl.save(Qry_one_forms,qry_one_form_dtl);
+end;
 
-  Qry_one_forms.Connection.StartTransaction;
-  try
-    Qry_one_forms.Post;
-    Qry_one_forms.Connection.Commit;
-  except
-    on E:Exception do
-    begin
-      ShowMessage('Error gagal save '+E.Message );
-    end;
-  end;
-
-  qry_one_form_dtl.Edit;
-  qry_one_form_dtl.Connection.StartTransaction;
-  try
-    qry_one_form_dtl.Post;
-    qry_one_form_dtl.Connection.Commit;
-  except
-    on E:Exception do
-    begin
-      ShowMessage('Error gagal save dtl '+E.Message );
-    end;
-  end;
+procedure Tform_one_form_dtl.Button2Click(Sender: TObject);
+begin
+  FModelOneFormsDtl.testcallmodel;
 end;
 
 procedure Tform_one_form_dtl.dbe_of_uuExit(Sender: TObject);
@@ -160,58 +185,21 @@ begin
 end;
 
 procedure Tform_one_form_dtl.edt_of_noExit(Sender: TObject);
-var
-  StoreQuery: TMyQuery;
-
 begin
-
   if  edt_of_no.Text <>'' then
   begin
-
-    //cek data di database
-    Qry_one_forms.Close;
-    Qry_one_forms.Connection:= FDBConnection.Connection;
-    Qry_one_forms.SQL.Text:='SELECT * FROM '+g_db1+'.one_forms WHERE of_kode=:edOfNo';
-    Qry_one_forms.ParamByName('edOfNo').AsString:=edt_of_no.Text;
-    Qry_one_forms.Open;
-
-    if Qry_one_forms.IsEmpty then
-    begin
-      showMessage('Nomor Tidak di temukan');
-      //edt_of_no.SetFocus;
-      //Abort;
-
-
-    end
-    else
-    begin
-      StoreQuery :=FunitUsaha.ValidasiStoreCode('MT_KODE',dbe_of_uu.Text);
-
-      if Assigned(StoreQuery) and (not StoreQuery.IsEmpty) then
-      begin
-        ed_edit_name.Text:=StoreQuery.FieldByName('MT_NAMA').AsString;
-        // Lanjutkan dengan penggunaan dataset di sini jika perlu
-      end
-      else
-      begin
-        dbe_of_uu.SetFocus;
-        ShowMessage('Tidak berhasil atau tidak ada data.');
-      end;
-      StoreQuery.Free; // Pastikan untuk membebaskan dataset setelah selesai menggunakannya
-
-
-      //ShowMessage(IntToStr(Qry_one_forms.FieldByName('of_kode').AsInteger));
-      qry_one_form_dtl.Close;
-      qry_one_form_dtl.Connection:= FDBConnection.Connection;
-      qry_one_form_dtl.SQL.Text:='SELECT * FROM '+g_db1+'.one_forms_det WHERE  ofd_of_pk=:ofPk';
-      qry_one_form_dtl.ParamByName('ofPk').AsInteger:=Qry_one_forms.FieldByName('of_pk').AsInteger;
-      qry_one_form_dtl.Open;
-
-    end;
-
+    //pindah ke model
+    FModelOneFormsDtl.EdNoExit(Qry_one_forms,qry_one_form_dtl);
   end;
 
 
+end;
+
+procedure Tform_one_form_dtl.FormClose(Sender: TObject;
+  var CloseAction: TCloseAction);
+begin
+  FreeAndNil(FDBConnection);
+  FreeAndNil(FunitUsaha);
 end;
 
 procedure Tform_one_form_dtl.KeyDownAll(Sender: TObject; var Key: Word;
@@ -227,6 +215,7 @@ begin
       end;
 
       VK_F2: ShowMessage('F2');
+
       VK_F3: ShowMessage('F3');
   end;
 end;

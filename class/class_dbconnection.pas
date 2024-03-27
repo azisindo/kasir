@@ -30,7 +30,9 @@ implementation
 
 constructor TDBConnection.Create;
 begin
+  //get variable connection
   getvardatabase;
+
   FConnection:= TMyConnection.Create(Nil);
 
   FConnection.Server:=g_hostname;
