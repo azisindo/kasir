@@ -85,7 +85,7 @@ begin
   if not FDBConnection.connect then
   begin
     ShowMessage(FDBConnection.logger);
-    exit;
+    Abort;
   end;
 
   //form model dtl.
@@ -111,6 +111,7 @@ procedure Tform_one_form_dtl.simpanClick(Sender: TObject);
 var
   lov: Tform_list_of_values;
   simpanpos:TPoint;
+  LValues: TStringList;
 begin
 
    //VK_F2:
@@ -145,10 +146,15 @@ begin
    // end;
   simpanpos:=simpan.ClientToScreen(Point(0, 0));;
   lov:=Tform_list_of_values.Create(self);
+  lov.Caption :='LOV Master Unit Usaha';
+  lov.SqlLov  :='SELECT of_kode, of_nama FROM laz.one_forms;';
+  lov.SetJudulLov:='Master Forms ;Nama Forms;150;L;Desc;500;L';
   lov.Left    := simpanpos.X;
   lov.Top     := simpanpos.Y ;//+ ed_store_idPos.height;
-
   lov.ShowModal;
+  LValues:=Lov.LovSelectedValues;
+
+  ShowMessage(LValues[0]);
 
 end;
 

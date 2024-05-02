@@ -12,7 +12,7 @@ uses
   Interfaces, // this includes the LCL widgetset
   Forms, zcomponent, rxnew, unit_one_forms_dtl, class_dbconnection, mydac10,
   model_one_forms_dtl, class_init_db, unit_libstring, class_unit_usaha,
-unit_list_of_values ;
+unit_list_of_values, model_list_of_values ;
 
 {$R *.res}
 

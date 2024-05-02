@@ -11,6 +11,7 @@ uses
 
 procedure getvardatabase;
 function getdirectory:string;
+Function posisi_str(teks, kt : string ; posisi : integer = 1 ) : integer ;
 
 var
 
@@ -122,6 +123,21 @@ begin
   {$ENDIF$}
 end;
 
+function posisi_str(teks, kt: string; posisi: integer): integer;
+begin
+  var
+    hasil, aposisi, plenteks : integer ;
+  begin
+    hasil        := 0 ;
+    teks         := trim(teks) ;
+    plenteks     := length(kt) ;
+
+    for aposisi := posisi to length(teks) do
+    begin
+      if ( copy(teks,aposisi,plenteks) = kt ) and (hasil = 0) then hasil := aposisi ;
+    end ;
+    result := hasil ;
+end;
 
 end.
 

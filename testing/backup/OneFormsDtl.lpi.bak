@@ -102,7 +102,12 @@
         <Filename Value="../lov/unit_list_of_values.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="form_list_of_values"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../lov/model_list_of_values.pas"/>
+        <IsPartOfProject Value="True"/>
       </Unit>
     </Units>
   </ProjectOptions>

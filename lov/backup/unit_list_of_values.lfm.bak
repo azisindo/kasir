@@ -5,6 +5,7 @@ object form_list_of_values: Tform_list_of_values
   Width = 457
   ClientHeight = 392
   ClientWidth = 457
+  OnShow = FormShow
   object pnl_all: TRMKPanelStandard
     Left = 9
     Height = 374
@@ -37,10 +38,16 @@ object form_list_of_values: Tform_list_of_values
         Width = 404
         Align = alClient
         BorderStyle = bsNone
+        Font.Color = clGray
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
         ParentFont = False
         ParentShowHint = False
         TabOrder = 0
         TextHint = 'Search'
+        OnExit = ed_searchExit
+        OnKeyDown = ed_searchKeyDown
+        OnKeyPress = ed_searchKeyPress
       end
       object SpeedButton1: TSpeedButton
         Left = 404
@@ -176,12 +183,16 @@ object form_list_of_values: Tform_list_of_values
         SearchOptions.FromStart = False
         OptionsRx = [rdgAllowColumnsForm, rdgAllowDialogFind, rdgAllowQuickFilter]
         Align = alClient
+        AutoEdit = False
         Color = clWindow
         DrawFullLine = False
         FocusColor = clRed
         SelectedColor = clHighlight
+        Flat = True
         Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+        ReadOnly = True
         TabOrder = 0
+        OnKeyDown = dbg_list_of_valuesKeyDown
       end
     end
     object pnl_bottom: TRMKPanelStandard
@@ -191,7 +202,6 @@ object form_list_of_values: Tform_list_of_values
       Width = 439
       Align = alBottom
       BevelOuter = bvNone
-      Caption = 'bawah'
       TabOrder = 2
     end
   end
